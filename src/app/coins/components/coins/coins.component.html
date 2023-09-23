@@ -1,1 +1,23 @@
-<p>coins works!</p>
+<div class="grid">
+  <div class="col">
+
+<p-table [value]="tickers()" styleClass="p-datatable-striped">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Logo</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Quantity</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-ticker>
+      <tr>
+          <td> <img [src]="currencyThumb(ticker.nameid)" [alt]="ticker.name">  </td>
+          <td> <strong> {{ ticker.name }}</strong></td>
+          <td></td>
+          <td></td>
+      </tr>
+  </ng-template>
+</p-table>
+  </div>
+</div>
