@@ -1,0 +1,33 @@
+<div class="grid">
+  <div
+    *ngFor="let exchange of exchanges()"
+    class="col-12 sm:col-6 xl:col-2 lg:col-3 md:col-4 my-2"
+  >
+    <p-card [header]="exchange.name" [subheader]="exchange.country">
+      <ng-template pTemplate="header">
+        <a target="_blank" [href]="exchange.url">
+          <img alt="Card" [src]="exchangeThumb(exchange.name_id)" />
+        </a>
+      </ng-template>
+
+      <ng-template pTemplate="footer">
+        <div class="text-center">
+          <p-tag
+            [icon]=""
+            severity="success"
+            value="{{ exchange.volume_usd | currency }}"
+            >Volume:
+          </p-tag>
+
+          <p-tag
+            class="ml-2"
+            [icon]=""
+            severity="info"
+            [value]="exchange.active_pairs"
+            >Pairs:
+          </p-tag>
+        </div>
+      </ng-template>
+    </p-card>
+  </div>
+</div>

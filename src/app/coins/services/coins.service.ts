@@ -12,7 +12,9 @@ export class CoinsService {
 
   http = inject(HttpClient);
 
-  _getAllCoins(): Observable<Tickerdata> {
-    return this.http.get<Tickerdata>(this.apiUrl);
+  _getAllCoins(start: number = 0, limit: number = 100): Observable<Tickerdata> {
+    return this.http.get<Tickerdata>(
+      `${this.apiUrl}/?start=${start}&limit=${limit}`
+    );
   }
 }

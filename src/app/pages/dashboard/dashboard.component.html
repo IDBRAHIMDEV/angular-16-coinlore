@@ -1,0 +1,29 @@
+<div class="grid">
+  <div class="col">
+    <h1>Dashboard</h1>
+  </div>
+</div>
+
+
+<div class="grid">
+  <div class="col-4">
+    <div class="card flex justify-content-center">
+      <p-chart type="doughnut" [data]="data" [options]="options"></p-chart>
+    </div>
+  </div>
+  <div class="col-8">
+    <div class="card">
+      <p-chart type="bar" [data]="dataBar" [options]="optionsBar"></p-chart>
+  </div>
+  </div>
+</div>
+
+<div class="grid my-5">
+  <div class="col">
+    <div class="card">
+        <p-chart type="line" [data]="dataCombo" [options]="optionsCombo"></p-chart>
+    </div>
+  </div>
+</div>
+
+

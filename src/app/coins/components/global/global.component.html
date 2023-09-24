@@ -1,0 +1,20 @@
+<div class="grid p-4">
+  <div class="col text-center bg-primary-600">
+    <strong>Numbers of Coins:</strong> {{ global().coins_count | number }}
+  </div>
+  <div class="col text-center bg-green-700">
+    <strong>Crypto:</strong> {{ global().total_mcap | currency }}
+  </div>
+  <div class="col text-center bg-orange-600">
+    <strong>Dominance Bitcoin:</strong> {{ global().btc_d | number }}%
+  </div>
+  <div class="col text-center bg-cyan-600">
+    <strong>Dominance Ethereum:</strong> {{ global().eth_d | number }}%
+  </div>
+  <div class="col text-center bg-indigo-600">
+    <strong>Market Cap ath:</strong> {{ global().mcap_ath | currency }}
+  </div>
+  <div class="col text-center bg-pink-600">
+    <strong>Volume ath:</strong> {{ global().volume_ath | currency }}
+  </div>
+</div>
